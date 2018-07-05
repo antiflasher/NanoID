@@ -1,4 +1,4 @@
-# NanoID
+# Nano ID
 Secure, URL-friendly, flexible and unique string ID generator for Swift. Swift realization of [Nano ID](https://github.com/ai/nanoid)
 
 **Instalation**
