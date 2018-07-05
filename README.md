@@ -9,18 +9,18 @@ Drag-n-drop `NanoID.swift` file into your project.
 **Usage**
 ```swift
 // Nano ID with default alphabet (0-9a-zA-Z_~) and length (21 chars)
-let id = NanoID.new()
+let id = NanoID.new() // -> dtY0D_lLeJJjM~pogpcY9
         
 // Nano ID with default alphabet and given length
-let id = NanoID.new(12)
+let id = NanoID.new(12) // -> _xw7Sou69dSQ
         
 // Nano ID with given alphabet and length
-let id = NanoID.new(alphabet: .uppercasedLatinLetters, size: 15)
+let id = NanoID.new(alphabet: .uppercasedLatinLetters, size: 15) // -> BFIXOAMLMKVSTYS
         
 // Nano ID with preset custom parameters
 let nanoID = NanoID(alphabet: .lowercasedLatinLetters,.numbers, size:10)
-let idFirst = nanoID.new()
-let idSecond = nanoID.new()
+let idFirst = nanoID.new() // -> b08eochgzf
+let idSecond = nanoID.new() // -> 80q1uxyf2p
 ```
 
 **Performance**
