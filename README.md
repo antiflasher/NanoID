@@ -37,4 +37,4 @@ Total time: 1.631867 secs (0.00002 sec per one ID)
 
 ***Variety***
 
-Among all 100,000 generated IDs the least used character occered 30795 times. The most used character occured 31650 times (2.7% bias)
+Among all 100,000 generated IDs the least used character occered 30,795 times. The most used character occured 31,650 times (2.7% bias)
