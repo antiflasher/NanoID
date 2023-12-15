@@ -23,20 +23,20 @@ import Foundation
 /// let idFirst = nanoID.new()
 /// let idSecond = nanoID.new()
 
-class NanoID {
+public class NanoID {
     
     // Shared Parameters
     private var size: Int
     private var alphabet: String
     
     /// Inits an instance with Shared Parameters
-    init(alphabet: NanoIDAlphabet..., size: Int) {
+    public init(alphabet: NanoIDAlphabet..., size: Int) {
         self.size = size
         self.alphabet = NanoIDHelper.parse(alphabet)
     }
     
     /// Generates a Nano ID using Shared Parameters
-    func new() -> String {
+    public func new() -> String {
         return NanoIDHelper.generate(from: alphabet, of: size)
     }
     
@@ -45,18 +45,18 @@ class NanoID {
     private static let defaultAphabet = NanoIDAlphabet.urlSafe.toString()
     
     /// Generates a Nano ID using Default Parameters
-    static func new() -> String {
+    public static func new() -> String {
         return NanoIDHelper.generate(from: defaultAphabet, of: defaultSize)
     }
     
     /// Generates a Nano ID using given occasional parameters
-    static func new(alphabet: NanoIDAlphabet..., size: Int) -> String {
+    public static func new(alphabet: NanoIDAlphabet..., size: Int) -> String {
         let charactersString = NanoIDHelper.parse(alphabet)
         return NanoIDHelper.generate(from: charactersString, of: size)
     }
     
     /// Generates a Nano ID using Default Alphabet and given size
-    static func new(_ size: Int) -> String {
+    public static func new(_ size: Int) -> String {
         return NanoIDHelper.generate(from: NanoID.defaultAphabet, of: size)
     }
 }
@@ -95,7 +95,7 @@ fileprivate class NanoIDHelper {
     }
 }
 
-enum NanoIDAlphabet {
+public enum NanoIDAlphabet {
     case urlSafe
     case uppercasedLatinLetters
     case lowercasedLatinLetters

@@ -66,3 +66,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Jetbrains IDEs
+.idea/
+
+# MacOS Finder
+.DS_Store
